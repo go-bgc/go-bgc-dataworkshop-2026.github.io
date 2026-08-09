@@ -4,8 +4,7 @@
   organizations:
     - name: School of Oceanography
     - name: University of Washington
-  bio: A short bio about yourself.
-    You can have multiple lines. Just watch that you have two leading spaces at the beginning.
+  bio: Trained as a theoretical physicist, Wing-Ho Ko is involved in data management and data science in the UW Float Lab. He is also an instructor of a course in python programming for UW undergraduates in oceanography.
   expertise:
     - Python and R programming
     - Data management
