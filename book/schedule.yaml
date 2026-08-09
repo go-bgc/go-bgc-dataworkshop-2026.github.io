@@ -66,8 +66,8 @@ tabs:
   - title: Group Stand-Up
     description: null
     time: 9:00 - 9:15
-  - title: Machine Learning and BGC-Argo Data
-    description: GOBAI-O2
+  - title: Mapping Ocean Interior Biogeochemistry with BGC Argo
+    description: Jon will discuss the history and importance of efforts to map ocean observations, new biogeochemical mapping opportunities presented by GO-BGC and BGC-Argo, strategies to map ocean BGC observations, and what we can learn about changing ocean processes from emerging mapped products.
     time: 9:15 - 10:15
     leads:
     - Jon Sharp
