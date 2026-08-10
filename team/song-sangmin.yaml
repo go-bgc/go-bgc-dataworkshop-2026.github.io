@@ -4,11 +4,11 @@
   organizations:
     - name: School of Oceanography
     - name: University of Washington
-  bio: A short bio about yourself.
+  bio: Song's ressearch focuses on understanding biogeochemical cycling using in situ observations from floats, gliders, and ships, combined with machine learning techniques.
 #    You can have multiple lines. Just watch that you have two leading spaces at the beginning.
-#  expertise:
-#    - skill 1
-#    - skill 2
+  expertise:
+    - Regression modeling
+    - Ocean carbon cycle
   social:
     - icon: github
       link: https://github.com/song-sangmin
