@@ -1,16 +1,15 @@
 - title: Adam Stoer
-  avatar: A URL with your picture
-  role: Your title
+  avatar: https://memg.ocean.dal.ca/personalPages/adam/adamImage.png
+  role: Graduate Student
   organizations:
     - name: Dalhousie University
-  bio: A short bio about yourself.
-    You can have multiple lines. Just watch that you have two leading spaces at the beginning.
-  expertise:
-    - skill 1
-    - skill 2
-  social:
-    - icon: github
-      link: Link to your GitHub profile
+#  bio: A short bio about yourself.
+#    You can have multiple lines. Just watch that you have two leading spaces at the beginning.
+#  expertise:
+#    - skill 1
+#    - skill 2
+#  social:
+#    - icon: github
+#      link: Link to your GitHub profile
   user_groups:
     - Organizer
-    
