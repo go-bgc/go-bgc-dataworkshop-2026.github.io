@@ -6,9 +6,9 @@
     - name: University of Washington
   bio: Ali’s research is in bio-optics and remote sensing, and motivated by the goal of understanding the mechanisms that drive the distributions of phytoplankton communities on varying spatial scales. 
     Ali is enthusiastic about the use of data science tools including machine learning and AI, cloud computing, and open-source data processing workflows.
-#  expertise:
-#    - skill 1
-#    - skill 2
+  expertise:
+    - Optical oceanography
+    - Remote sensing
 #  social:
 #    - icon: github
 #      link: Link to your GitHub profile
