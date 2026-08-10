@@ -1,20 +1,20 @@
 - title: Charlotte Begouen Demeaux
-  avatar: A URL with your picture
-  role: Your title
+  avatar: https://www.researchgate.net/profile/Charlotte_Begouen_Demeaux
+  role: Postdoc
   organizations:
-    - name: Your institution
-  bio: A short bio about yourself.
-    You can have multiple lines. Just watch that you have two leading spaces at the beginning.
-  expertise:
-    - skill 1
-    - skill 2
-  social:
-    - icon: github
-      link: Link to your GitHub profile
-    - icon: twitter
-      link: Link to your Twitter profile
-    - icon: linkedin
-      link: Link to your LinkedIn profile
+    - name: University of Maine
+#  bio: A short bio about yourself.
+#    You can have multiple lines. Just watch that you have two leading spaces at the beginning.
+#  expertise:
+#    - skill 1
+#    - skill 2
+#  social:
+#    - icon: github
+#      link: Link to your GitHub profile
+#    - icon: twitter
+#      link: Link to your Twitter profile
+#    - icon: linkedin
+#      link: Link to your LinkedIn profile
   user_groups:
     - Lecturer
     
