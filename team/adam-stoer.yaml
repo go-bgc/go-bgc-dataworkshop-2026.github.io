@@ -3,11 +3,12 @@
   role: Graduate Student
   organizations:
     - name: Dalhousie University
-  bio: A short bio about yourself.
-#    You can have multiple lines. Just watch that you have two leading spaces at the beginning.
-#  expertise:
-#    - skill 1
-#    - skill 2
+  bio: My primary interest in science has been on the ecology of phytoplankton, specifically how their biomass and productivity is distributed across space and time. 
+    My research leverages measurements made by autonomous underwater vehicles (e.g., gliders and floats) deployed in the ocean as well as space satellites. 
+    My research topics involve developing optical techniques for describing phytoplankton biogeography, phenology, photo-physiology, and biogeochemical cycles.
+  expertise:
+    - Optical oceanography
+    - Phytoplankton Ecology
 #  social:
 #    - icon: github
 #      link: Link to your GitHub profile
