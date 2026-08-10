@@ -30,7 +30,8 @@ All of our communication throughout the hackweek will be done using the {{ '[`{h
 
 ### GitHub Account
 
-Everyone attending {{ hackweek }} will require a GitHub account. Visit [the GitHub help pages](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github) if you are in need of an account.  Please add your GitHub User ID to [this spreadsheet](https://docs.google.com/spreadsheets/d/1Nau-xnv5VGGGgYlCa8nRhzOUCeZgxFqgaDNZfspp2Ls/edit?usp=sharing).  You will receive invitations to join two different GitHub organizations: {{ github_org_url}} and [<i class="fab fa-github"></i>uw-escience-cloudbank](https://github.com/uw-escience-cloudbank).  Once you accept these invitations, you are ready to go!
+Everyone attending {{ hackweek }} will require a GitHub account. Visit [the GitHub help pages](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github) if you are in need of an account.  Please add your GitHub User ID to [this spreadsheet](https://docs.google.com/spreadsheets/d/1Nau-xnv5VGGGgYlCa8nRhzOUCeZgxFqgaDNZfspp2Ls/edit?usp=sharing).  You will receive invitations to join two different GitHub organizations: {{ github_org_url}} and <a class="github reference external" href="https://github.com/uw-escience-cloudbank">uw-escience-cloudbank</a>.  Once you accept these invitations, you are ready to go!
+
 
 (accessing-jupyterhub)=
 ### JupyterHub
