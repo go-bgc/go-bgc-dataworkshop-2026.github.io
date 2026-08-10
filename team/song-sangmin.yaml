@@ -1,19 +1,16 @@
 - title: Song Sangmin
-  avatar: A URL with your picture
-  role: Your title
+  avatar: https://song-sangmin.github.io/images/profile.jpg
+  role: Graduate Student
   organizations:
-    - name: Your institution
-  bio: A short bio about yourself.
-    You can have multiple lines. Just watch that you have two leading spaces at the beginning.
-  expertise:
-    - skill 1
-    - skill 2
+    - name: School of Oceanography
+    - name: University of Washington
+#  bio: A short bio about yourself.
+#    You can have multiple lines. Just watch that you have two leading spaces at the beginning.
+#  expertise:
+#    - skill 1
+#    - skill 2
   social:
     - icon: github
-      link: Link to your GitHub profile
-    - icon: twitter
-      link: Link to your Twitter profile
-    - icon: linkedin
-      link: Link to your LinkedIn profile
+      link: https://github.com/song-sangmin
   user_groups:
     - Tutorial Lead
