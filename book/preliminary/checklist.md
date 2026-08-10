@@ -12,7 +12,7 @@ __Upon completion you__:
 </div>
 <div>
   <input type="checkbox" name="a3">
-  <label for="a3">Created a GitHub account</label>
+  <label for="a3">Created a GitHub account and joined the go-bgc and uw-escience-cloudbank organizations</label>
 </div>
 <div>
   <input type="checkbox" name="a4">
@@ -30,7 +30,7 @@ All of our communication throughout the hackweek will be done using the {{ '[`{h
 
 ### GitHub Account
 
-Everyone attending {{ hackweek }} will require a GitHub account. Visit [the GitHub help pages](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github) if you are in need of an account.  Please add your GitHub User ID to [this spreadsheet](https://docs.google.com/spreadsheets/d/1Nau-xnv5VGGGgYlCa8nRhzOUCeZgxFqgaDNZfspp2Ls/edit?usp=sharing).  You will receive invitations to join two different GitHub organizations: {{ github_org_url}} and uw-escience-cloudbank.  Once you accept these invitations, you will be ready to go!
+Everyone attending {{ hackweek }} will require a GitHub account. Visit [the GitHub help pages](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github) if you are in need of an account.  Please add your GitHub User ID to [this spreadsheet](https://docs.google.com/spreadsheets/d/1Nau-xnv5VGGGgYlCa8nRhzOUCeZgxFqgaDNZfspp2Ls/edit?usp=sharing).  You will receive invitations to join two different GitHub organizations: {{ github_org_url}} and [uw-escience-cloudbank](https://github.com/uw-escience-cloudbank).  Once you accept these invitations, you will be ready to go!
 
 (accessing-jupyterhub)=
 ### JupyterHub
