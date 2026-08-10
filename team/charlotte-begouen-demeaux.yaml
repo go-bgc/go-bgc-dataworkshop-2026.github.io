@@ -3,11 +3,11 @@
   role: Postdoc
   organizations:
     - name: University of Maine
-  bio: A short bio about yourself.
+  bio: Charlotte's research focuses on optical oceanography using Biogeochemical Argo floats and satellite remote sensing.
 #    You can have multiple lines. Just watch that you have two leading spaces at the beginning.
-#  expertise:
-#    - skill 1
-#    - skill 2
+  expertise:
+    - Remote sensing
+    - Optical oceanography
 #  social:
 #    - icon: github
 #      link: Link to your GitHub profile
