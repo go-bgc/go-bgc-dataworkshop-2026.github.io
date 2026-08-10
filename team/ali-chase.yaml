@@ -1,20 +1,20 @@
 - title: Ali Chase
-  avatar: A URL with your picture
-  role: Your title
+  avatar: https://sites.uw.edu/alichase/files/2024/01/chase_profile_pic_2023-051c14b6d86d87ef-e1705971274976-277x300.jpg
+  role: Senior Oceanographer
   organizations:
     - name: Applied Physics Laboratory
     - name: University of Washington
-  bio: A short bio about yourself.
-    You can have multiple lines. Just watch that you have two leading spaces at the beginning.
-  expertise:
-    - skill 1
-    - skill 2
-  social:
-    - icon: github
-      link: Link to your GitHub profile
-    - icon: twitter
-      link: Link to your Twitter profile
-    - icon: linkedin
-      link: Link to your LinkedIn profile
+  bio: Ali’s research is in bio-optics and remote sensing, and motivated by the goal of understanding the mechanisms that drive the distributions of phytoplankton communities on varying spatial scales. 
+    Ali is enthusiastic about the use of data science tools including machine learning and AI, cloud computing, and open-source data processing workflows.
+#  expertise:
+#    - skill 1
+#    - skill 2
+#  social:
+#    - icon: github
+#      link: Link to your GitHub profile
+#    - icon: twitter
+#      link: Link to your Twitter profile
+#    - icon: linkedin
+#      link: Link to your LinkedIn profile
   user_groups:
     - Lecturer
