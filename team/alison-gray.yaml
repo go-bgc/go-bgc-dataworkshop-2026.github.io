@@ -1,16 +1,18 @@
 - title: Alison Gray
-  avatar: https://www.go-bgc.org/wp-content/uploads/2020/11/Gray.jpg
+  avatar: https://environment.uw.edu/wp-content/uploads/2017/12/Alison-Gray-528x528.jpg
   role: Associate Professor
   organizations:
     - name: School of Oceanography
     - name: University of Washington
-  bio: GO-BGC team member.
+  bio: Alison Gray is an oceanographer who studies the circulation of the ocean and its impact on the physics and chemistry of the climate system. 
+    She uses observations from many different sources, including profiling floats, gliders, satellites, and ships, to investigate the dynamics of the ocean circulation on a variety of scales. 
+    Her research also aims to improve our understanding of the interactions between ocean circulation and global biogeochemical cycles.
   expertise:
-    - Data analysis
-    - BGC-Argo floats
+    - Argo floats
+    - Regression modeling
   social:
     - icon: github
       link: https://github.com/alisonrgray
   user_groups:
-    - Workshop Organizer
+    - Organizer
     - Tutorial Lead

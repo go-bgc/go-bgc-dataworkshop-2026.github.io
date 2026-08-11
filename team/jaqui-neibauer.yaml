@@ -1,14 +1,12 @@
 - title: Jaqui Neibauer
-  avatar: A URL with your picture
-  role: Your title
+  avatar: https://www.ocean.washington.edu/files/jaqui-20260805045556_smsq.jpg
+  role: Program Administrator
   organizations:
     - name: School of Oceanography
     - name: University of Washington
-  bio: A short bio about yourself.
-    You can have multiple lines. Just watch that you have two leading spaces at the beginning.
+  bio: Jaqui Neibaur is the Program Administrator for the University of Washington Float Lab.
   expertise:
-    - skill 1
-    - skill 2
+    - Workshop logistics, including housing, travel, and meals 
   user_groups:
-    - Workshop Organizer
-    - Logistics Lead
+    - Organizer
+    

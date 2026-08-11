@@ -1,19 +1,17 @@
 - title: Jon Sharp
-  avatar: A URL with your picture
-  role: Your title
+  avatar: https://cicoes.uw.edu/wp-content/uploads/sites/21/2024/01/sharp_john_headshot-300x287.jpg
+  role: Research Scientist / Affiliate Assistant Professor
   organizations:
-    - name: Your institution
-  bio: A short bio about yourself.
-    You can have multiple lines. Just watch that you have two leading spaces at the beginning.
+    - name: Cooperative Institute for Climate, Ocean, and Ecosystem Studies (CICOES)
+    - name: University of Washington
+  bio: Jon is an oceanographer who investigates changes to global ocean chemistry and biogeochemical processes using observations from the global array of biogeochemical Argo profiling floats, large-scale research cruises, fixed ocean moorings, and other observational platforms.
+    He is particularly interested in ocean carbon uptake, acidification, and deoxygenation, as well as the application of machine learning techniques to create useful data products from ocean observations.
   expertise:
-    - skill 1
-    - skill 2
+    - Ocean Carbon and Oxygen
+    - BGC Argo Floats
+    - Machine Learning
   social:
     - icon: github
-      link: Link to your GitHub profile
-    - icon: twitter
-      link: Link to your Twitter profile
-    - icon: linkedin
-      link: Link to your LinkedIn profile
+      link: https://github.com/jonathansharp
   user_groups:
     - Lecturer

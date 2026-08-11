@@ -1,19 +1,21 @@
 - title: Guillaume Liniger
-  avatar: A URL with your picture
-  role: Your title
+  avatar: https://www.mbari.org/wp-content/uploads/Liniger_Guillaum_cropped.jpg
+  role: Postdoc Fellow
   organizations:
     - name: Monterey Bay Aquarium Research Institute
-  bio: A short bio about yourself.
-    You can have multiple lines. Just watch that you have two leading spaces at the beginning.
+  bio:  I am a polar oceanographer and a Southern Ocean Carbon Climate Observations and Modeling (SOCCOM) research associate fellow at MBARI. 
+    Using robotic floats, satellites, model outputs, and artificial intelligence, I investigate how physical and biological processes interact to shape Southern Ocean ecosystems. 
+    At MBARI, my research focuses on developing new tools to explore and monitor changes in polar ecosystems in near real-time.
   expertise:
-    - skill 1
-    - skill 2
+    - Carbon export; Phytoplankton bloom
+    - BGC-Argo Floats
+    - Southern Ocean
   social:
+    - icon: researchgate
+      link: https://www.researchgate.net/profile/Guillaume-Liniger 
     - icon: github
-      link: Link to your GitHub profile
-    - icon: twitter
-      link: Link to your Twitter profile
+      link: https://github.com/GhomL/
     - icon: linkedin
-      link: Link to your LinkedIn profile
+      link: https://www.linkedin.com/in/guillaume-liniger-858507a1/
   user_groups:
-    - Workshop Organizer
+    - Organizer

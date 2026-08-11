@@ -1,19 +1,18 @@
 - title: Wing-Ho Ko
-  avatar: A URL with your picture
-  role: Your title
+  avatar: https://raw.githubusercontent.com/go-bgc/go-bgc-dataworkshop-2026.github.io/main/team/img/Wing-Ho_Ko.jpg
+  role: Acting Assistant Professor
   organizations:
-    - name: Your institution
-  bio: A short bio about yourself.
-    You can have multiple lines. Just watch that you have two leading spaces at the beginning.
+    - name: School of Oceanography
+    - name: University of Washington
+  bio: Trained as a theoretical physicist, Wing-Ho Ko is involved in data management and data science in the UW Float Lab. He is also an instructor of a course in python programming for UW undergraduates in oceanography.
   expertise:
-    - skill 1
-    - skill 2
+    - Python and R programming
+    - Data management
   social:
     - icon: github
-      link: Link to your GitHub profile
-    - icon: twitter
-      link: Link to your Twitter profile
-    - icon: linkedin
-      link: Link to your LinkedIn profile
+      link: https://github.com/winghoko
+    - icon: github
+      link: https://github.com/wingho-uw
   user_groups:
-    - Technology Lead
+    - Technology lead
+

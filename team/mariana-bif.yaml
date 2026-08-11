@@ -1,19 +1,18 @@
 - title: Mariana Bif
-  avatar: A URL with your picture
-  role: Your title
+  avatar: https://people.miami.edu/_assets-profiles/acad-rsms/images/mariane-bif-240x320.jpg
+  role: Assistant Professor
   organizations:
-    - name: Your institution
-  bio: A short bio about yourself.
-    You can have multiple lines. Just watch that you have two leading spaces at the beginning.
+    - name: University of Miami
+  bio:  Mari's research uses autonomous robotic platforms such as Biogeochemical-Argo floats alongside multiplatform observations to investigate how extreme climate events affect marine ecosystems. 
+    She studies how marine heatwaves and low-oxygen conditions alter food webs, the biological carbon pump, nitrogen cycling and ocean chemistry throughout the global ocean. 
+    Her work aims to better understand how changing ocean conditions reshape marine biogeochemical cycles.
   expertise:
-    - skill 1
-    - skill 2
+    - Carbon and nitrogen cycles
+    - BGC-Argo floats
+    - Dissolved organic carbon and nitrogen
   social:
-    - icon: github
-      link: Link to your GitHub profile
-    - icon: twitter
-      link: Link to your Twitter profile
     - icon: linkedin
-      link: Link to your LinkedIn profile
+      link: https://www.linkedin.com/in/mariana-bif-492208122/
   user_groups:
-    - Workshop Organizer
+    - Organizer
+    

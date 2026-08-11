@@ -1,19 +1,19 @@
 - title: Jannes Koelling
-  avatar: A URL with your picture
-  role: Your title
+  avatar: https://jkoell.github.io/assets/images/jannes_headshot.jpeg
+  role: Researcher
   organizations:
-    - name: Your institution
-  bio: A short bio about yourself.
-    You can have multiple lines. Just watch that you have two leading spaces at the beginning.
+    - name: School of Oceanography
+    - name: University of Washington
+  bio: I am a researcher in the University of Washington's float lab studying ocean ventilation in the North Atlantic and Southern Ocean
   expertise:
-    - skill 1
-    - skill 2
+    - Physical-biogeochemical coupling
+    - Oxygen sensors
   social:
     - icon: github
-      link: Link to your GitHub profile
-    - icon: twitter
-      link: Link to your Twitter profile
+      link: https://github.com/jkoell
+    - icon: bluesky
+      link: https://bsky.app/profile/koelling.bsky.social
     - icon: linkedin
-      link: Link to your LinkedIn profile
+      link: https://www.linkedin.com/in/jannes-koelling/
   user_groups:
-    - Workshop Organizer
+    - Organizer

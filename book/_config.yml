@@ -4,6 +4,7 @@
 title: GO-BGC Data and Science Workshop
 author: GO-BGC Team
 logo: logo.png
+favicon: favicon.png
 only_build_toc_files: true
 
 parse:
@@ -20,7 +21,7 @@ parse:
     contact_email: "jaqui@uw.com"
     dataset: "BGC Argo Data"
     anon_reporting_url: "https://INSERT_FORM_LINK"
-    project_spreadsheet_url: "https://docs.google.com/spreadsheets/d/1bgctycmRuaBigeSFLttWlI0P4k74UjsB0a1AMDJ4VGA/edit?usp=sharing"
+    project_spreadsheet_url: "[Projects Spreadsheet](https://docs.google.com/spreadsheets/d/1bgctycmRuaBigeSFLttWlI0P4k74UjsB0a1AMDJ4VGA/edit?usp=sharing)"
   myst_enable_extensions:
     # Defaults
     - dollarmath

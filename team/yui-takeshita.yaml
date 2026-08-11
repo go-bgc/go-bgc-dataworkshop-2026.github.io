@@ -1,15 +1,15 @@
 - title: Yui Takeshita
   avatar: https://www.go-bgc.org/wp-content/uploads/2020/11/Takeshita.jpg
-  role: Your title
+  role: Scientist
   organizations:
-    - name: Your institution
-  bio: A short bio about yourself.
-    You can have multiple lines. Just watch that you have two leading spaces at the beginning.
+    - name: Monterey Bay Aquarium Research Institute
+  bio: Yui’s main research interests are to develop and apply autonomous sensing technology to observe marine biogeochemical cycles in situ.
   expertise:
-    - skill 1
-    - skill 2
+    - Biogeochemical sensors
+    - BGC Argo floats
+    - Gliders
   social:
     - icon: github
       link: https://github.com/yui-takeshita
   user_groups:
-    - Workshop Organizer
+    - Organizer

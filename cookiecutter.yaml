@@ -17,7 +17,7 @@ banner:
 # The opening session of the event with UTC offset
 event_countdown: "2026-08-17T08:30:00-07:00"
 about:
-  description: This workshop will be organized as a HackWeek, where small groups will pursue a scientific objective using BGC-Argo data while learning new things and building community.  
+  description: This workshop is organized as a HackWeek, where small groups will pursue a scientific objective using BGC-Argo data while learning new things and building community.  
   learn_more: https://escience.washington.edu/using-data-science/hackweeks
   #links:
    # - url: 'https://www.go-bgc.org/'
@@ -37,6 +37,9 @@ sponsors:
   - name: eScience
     website: 'https://escience.washington.edu'
     logo_url: https://escience.washington.edu/wp-content/uploads/2015/10/Logo_eScience-stacked.png
+  - name: NSF
+    website: 'https://www.nsf.gov/'
+    logo_url: https://www.nsf.gov/themes/custom/nsf_theme/components/molecules/logo/logo-desktop.png
 footer:
   social:
   - icon: github

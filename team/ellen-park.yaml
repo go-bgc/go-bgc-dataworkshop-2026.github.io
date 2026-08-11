@@ -1,16 +1,17 @@
 - title: Ellen Park
-  avatar: A URL with your picture
-  role: Your title
+  avatar: https://boom.science/images/people/Park.jpg
+  role: Postdoctoral Fellow
   organizations:
-    - name: Your institution
-  bio: A short bio about yourself.
-    You can have multiple lines. Just watch that you have two leading spaces at the beginning.
+    - name: Dalhousie University
+  bio: Ellen's research uses Biogeochemical Argo floats to better understand carbon and oxygen cycling.
+    She also leverages the power of machine learning to help maximize the utility of observational datasets.
   expertise:
-    - skill 1
-    - skill 2
+    - Biological carbon pump
+    - Oxygen measurements from profiling floats
   social:
     - icon: github
       link: https://github.com/ellenrpark
   user_groups:
+    - Organizer
     - Tutorial Lead
-    - Workshop Organizer
+  

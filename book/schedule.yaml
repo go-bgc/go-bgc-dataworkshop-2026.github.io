@@ -4,39 +4,42 @@ tabs:
   date: Sunday 16 August
   contents: 
   - title: Icebreaker
-    description: Meet workshop attendees for an informal gathering at XX (optional).
+    description: Meet workshop attendees for an informal gathering at the [Big Time Brewery](https://www.bigtimebrewery.com/) (optional).
     time: 19:00 - 20:30
 - title: Day 1
   date: Monday 17 August
   contents:
+  - title: MORNING COFFEE and TEA
+    description: null
+    time: 8:00 - 8:30
   - title: Introductory Session
     description: Welcome, Introductions, and Updates on GO-BGC and BGC-Argo.
     time: 8:30 - 9:30
     leads:
     - Alison Gray
-    - David (Roo) Nicholson
+    - David Nicholson
     - Yui Takeshita
   - title: BGC-Argo Data
     description: Overview of data processing and quality control
-    time: 9:30 - 10:15
+    time: 9:30 - 10:30
     leads:
     - Logan Grady
     - Nicola Guisewhite
   - title: BREAK
     description: null
-    time: 10:15 - 10:45
+    time: 10:30 - 11:00
   - title: BGC-Argo Data Examples
     description: null
-    time: 10:45 - 11:30
+    time: 11:00 - 11:45
     leads:
     - Logan Grady
     - Nicola Guisewhite
   - title: Project Pitch Lightning Talks
     description: null
-    time: 11:30 - 12:00
+    time: 11:45 - 12:15
   - title: LUNCH
     description: null
-    time: 12:00 - 13:30
+    time: 12:15 - 13:30
   - title: Team Formation
     description: null
     time: 13:30 - 14:00
@@ -45,20 +48,26 @@ tabs:
     time: 14:00 - 14:30
     leads: 
     - Wing-Ho Ko
-  - title: OPEN PROJECT WORK
+  - title: BREAK
     description: null
-    time: 14:30 - 16:00
+    time: 14:30 - 15:00
+  - title: Open Project Work
+    description: null
+    time: 15:00 - 16:00
   - title: RECEPTION and FLOAT LAB TOUR
     description: Enjoy some light refreshments, learn about RBR and Seabird products, tour the UW Float Lab, and chat with fellow attendees and participants in the MATE Float Tech workshop in the lobby of the [Ocean Sciences Building](https://map.uw.edu/?id=2099#!m/973250?share).
     time: 16:00 - 18:00
 - title: Day 2
   date: Tuesday 18 August
   contents:
-  - title: Group STAND-UP
+  - title: MORNING COFFEE & TEA
+    description: null
+    time: 8:00 - 9:00
+  - title: Group Stand-Up
     description: null
     time: 9:00 - 9:15
-  - title: Machine Learning and BGC-Argo Data
-    description: GOBAI-O2
+  - title: Mapping Ocean Interior Biogeochemistry with BGC Argo
+    description: Jon will discuss the history and importance of efforts to map ocean observations, new biogeochemical mapping opportunities presented by GO-BGC and BGC-Argo, strategies to map ocean BGC observations, and what we can learn about changing ocean processes from emerging mapped products.
     time: 9:15 - 10:15
     leads:
     - Jon Sharp
@@ -74,16 +83,25 @@ tabs:
   - title: LUNCH
     description: null
     time: 12:00 - 13:30
-  - title: OPEN PROJECT WORK
+  - title: Open Project Work
+    description: Organizers and experts will be available for feedback and questions.
+    time: 13:30 - 15:00
+  - title: BREAK
     description: null
-    time: 13:30 - 17:00
+    time: 15:00 - 15:30  
+  - title: Open Project Work
+    description: Organizers and experts will be available for feedback and questions.
+    time: 15:30 - 17:00
   - title: Soccer
     description: Come join a friendly game of soccer at the [UW Athletic Fields](https://map.uw.edu/?id=2099#!m/1049675?share) (optional).
     time: 19:00–20:30
 - title: Day 3
   date: Wednesday 19 August
   contents:
-  - title: Group STAND-UP
+  - title: MORNING COFFEE & TEA
+    description: null
+    time: 8:00 - 9:00
+  - title: Group Stand-Up
     description: null
     time: 9:00 - 9:15
   - title: Remote Sensing and BGC-Argo Data
@@ -91,6 +109,7 @@ tabs:
     time: 9:15 - 10:15
     leads:
     - Charlotte Begouen Demeaux
+    - Ali Chase
   - title: BREAK
     description: null
     time: 10:15 - 10:45
@@ -102,13 +121,22 @@ tabs:
   - title: LUNCH
     description: null
     time: 12:00 - 13:30
-  - title: OPEN PROJECT WORK
+  - title: Open Project Work
+    description: Organizers and experts will be available for feedback and questions.
+    time: 13:30 - 15:00
+  - title: BREAK
     description: null
-    time: 13:30 - 17:00
+    time: 15:00 - 15:30  
+  - title: Open Project Work
+    description: Organizers and experts will be available for feedback and questions.
+    time: 15:30 - 17:00
 - title: Day 4
   date: Thursday 20 August
   contents:
-  - title: Group STAND-UP
+  - title: MORNING COFFEE & TEA
+    description: null
+    time: 8:00 - 9:00
+  - title: Group Stand-Up
     description: null
     time: 9:00 - 9:15
   - title: CloudBank
@@ -116,24 +144,36 @@ tabs:
     time: 9:15 - 9:45
     leads:
     - Scott Henderson
-  - title: OPEN PROJECT WORK
-    description: null
+  - title: Open Project Work
+    description: Organizers and experts will be available for feedback and questions.
     time: 9:45 - 10:15
   - title: BREAK
     description: null
     time: 10:15 - 10:45
-  - title: OPEN PROJECT WORK
-    description: null
+  - title: Open Project Work
+    description: Organizers and experts will be available for feedback and questions.
     time: 10:45 - 12:00
   - title: LUNCH
     description: null
     time: 12:00 - 13:30
-  - title: OPEN PROJECT WORK
+  - title: Open Project Work
+    description: Organizers and experts will be available for feedback and questions.
+    time: 13:30 - 15:00
+  - title: BREAK
     description: null
-    time: 13:30 - 17:00
+    time: 15:00 - 15:30  
+  - title: Open Project Work
+    description: Organizers and experts will be available for feedback and questions.
+    time: 15:30 - 17:00
 - title: Day 5
   date: Friday 21 August
   contents:
+  - title: MORNING COFFEE & TEA
+    description: null
+    time: 8:00 - 8:30
   - title: Project Presentations
     description: null
     time: 8:30 - 12:30
+  - title: LUNCH
+    description: null
+    time: 12:30 - 13:30

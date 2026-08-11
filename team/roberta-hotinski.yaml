@@ -1,13 +1,17 @@
 - title: Roberta Hotinski
-  avatar: A URL with your picture
-  role: Your title
+  avatar: https://www.go-bgc.org/wp-content/uploads/2020/11/Hotinski.jpg
+  role: GO-BGC and SOCCOM Project Manager
   organizations:
-    - name: Your institution
+    - name: Princeton University
   bio: A short bio about yourself.
     You can have multiple lines. Just watch that you have two leading spaces at the beginning.
   expertise:
     - skill 1
     - skill 2
+  social:
+    - icon: github
+      link: Link to your GitHub profile
   user_groups:
-    - Workshop Organizer
+    - Organizer
     - Administrative Lead
+ 

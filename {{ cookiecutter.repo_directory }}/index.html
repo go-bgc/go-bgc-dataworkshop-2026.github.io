@@ -3,6 +3,7 @@
 
 <head>
     <title>{{ cookiecutter.name }}</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -10,7 +11,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ cookiecutter.banner.description }}">
     <meta name="author" content="{{ cookiecutter.name }}">
-    <link rel="shortcut icon" href="favicon.ico">
 
     <!-- Google Font -->
     <link
@@ -38,7 +38,7 @@
                 <div class="site-logo">
                     <a class="scrollto" href="#hero-block">
                         <span class="logo-icon-text">
-                            UW eScience Hackweek
+                            GO-BGC Data and Science Workshop
                         </span>
                     </a>
                 </div>
@@ -208,12 +208,7 @@
     <div class="container">
         <h3 class="section-heading text-center mb-1">Schedule</h3>
         <h4 class="text-center mb-5">
-            All times listed below are {{ cookiecutter.schedule.timezone }}.
-            You might want to consult this
-            <a href="https://www.timeanddate.com/time/map/" target="_blank">
-                Time Zone Map
-            </a>
-            to figure out times in your location.</h4>
+            All times listed below are {{ cookiecutter.schedule.timezone }}.</h4>
         {%- if cookiecutter.schedule["tabs"] %}
         <!-- Nav tabs -->
         <ul class="schedule-nav nav nav-pills nav-fill" id="myTab"

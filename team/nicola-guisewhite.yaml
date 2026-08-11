@@ -1,20 +1,18 @@
 - title: Nicola Guisewhite
-  avatar: A URL with your picture
-  role: Your title
+  avatar: https://media.licdn.com/dms/image/v2/D5603AQHMkI4QuIjPLA/profile-displayphoto-scale_400_400/B56Z_ZXAZCHUAg-/0/1786058116900?e=1787788800&v=beta&t=yBLUAlBgWM0dWwJyepV5Wtbrdo-zpfzZalrmS4wb6G0
+  role: Research Technician
   organizations:
-    - name: Your institution
-  bio: A short bio about yourself.
-    You can have multiple lines. Just watch that you have two leading spaces at the beginning.
+    - name: Monterey Bay Aquarium Research Institute
+  bio: I have been a member of the GOBGC/SOCCOM Data Team at MBARI for just over 3 years.
+    I have a Masters in Chemical Oceanography, and Bachelors in Meteorology.
   expertise:
-    - skill 1
-    - skill 2
+    - BGC Argo Data Processing and Quality Control
+    - Matlab and Python
   social:
     - icon: github
-      link: Link to your GitHub profile
-    - icon: twitter
-      link: Link to your Twitter profile
+      link: https://github.com/nicolagMBARI
     - icon: linkedin
-      link: Link to your LinkedIn profile
+      link: https://www.linkedin.com/in/nicola-guisewhite/
   user_groups:
     - Lecturer
-    - Data QC Specialist
+    - Data Specialist

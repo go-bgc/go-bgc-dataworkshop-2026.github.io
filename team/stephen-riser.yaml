@@ -1,0 +1,13 @@
+- title: Stephen Riser
+  avatar: https://environment.uw.edu/wp-content/uploads/2014/04/Stephen-Riser-528x528.jpg
+  role: Professor
+  organizations:
+    - name: School of Oceanography
+    - name: University of Washington
+  bio: Stephen Riser is an oceanographer with long-term interests in the interactions of the physical and chemical aspects of the circulation of the large-scale ocean. 
+    He focuses on the use of profiling float technology to study ocean circulation at a global level, and his laboratory has built and deployed over 1400 floats in the past decade in support of these studies. 
+    With his laboratory, he has also pioneered the use of many of the technologies presently used in modern profiling floats, including the addition of biogeochemical sensors, under-ice technology, and the use of Iridium communications.
+  expertise:
+    - Argo floats
+  user_groups:
+    - Organizer

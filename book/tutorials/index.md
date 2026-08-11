@@ -4,5 +4,5 @@ Hackweek tutorials are learning-oriented and guide participants through a step-w
 
 | Tutorial | Topics | Datasets |
 | -  | - | - |  
-| [Machine Learning](./machine-learning/argo_regression_modeling.ipynb) | Machine Learning | ? | 
-| [Remote Sensing] | Remote Sensing | ? |
+| [Machine Learning](./machine-learning/argo_regression_modeling.ipynb) | Decision tree regression models | BGC Argo, California Underwater Glider Network | 
+| [Remote Sensing] | Remote Sensing | TBA |
