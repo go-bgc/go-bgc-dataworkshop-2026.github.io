@@ -1,19 +1,16 @@
 - title: Song Sangmin
-  avatar: A URL with your picture
-  role: Your title
+  avatar: https://raw.githubusercontent.com/song-sangmin/song-sangmin.github.io/refs/heads/web-cv/images/profile.jpg
+  role: Graduate Student
   organizations:
-    - name: Your institution
-  bio: A short bio about yourself.
-    You can have multiple lines. Just watch that you have two leading spaces at the beginning.
+    - name: University of Washington
+  bio: Song is a PhD candidate at UW interested in carbon modeling and how data science techniques can be used to reconstruct fields from sparse observations. 
   expertise:
-    - skill 1
-    - skill 2
+    - Regression modeling / machine learning
+    - Southern Ocean biogeochemistry
   social:
     - icon: github
-      link: Link to your GitHub profile
-    - icon: twitter
-      link: Link to your Twitter profile
+      link: https://github.com/song-sangmin
     - icon: linkedin
-      link: Link to your LinkedIn profile
+      link: https://www.linkedin.com/in/songsangmin/
   user_groups:
     - Tutorial Lead
