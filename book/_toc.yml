@@ -19,8 +19,8 @@ parts:
 - caption: Tutorials
   chapters:
     - file: tutorials/index
-      sections:
-        - file: tutorials/machine-learning/argo_regression_modeling.ipynb
+      #sections:
+        #- file: tutorials/machine-learning/argo_regression_modeling.ipynb
 - caption: Projects
   chapters:
     - file: projects/index
