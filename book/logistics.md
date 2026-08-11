@@ -2,9 +2,8 @@
 
 ## Wireless
 
-* WiFi: University of Washington
-* UW NetID: TBD
-* Password: TBD
+* eduroam is available if supported by your institution.
+* The username and password for the University of Washington network will be shared with participants via Slack.
 
 ## Location
 
