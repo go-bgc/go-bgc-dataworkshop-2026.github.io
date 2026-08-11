@@ -9,11 +9,11 @@
   expertise:
     - Optical oceanography
     - Remote sensing
-#  social:
-#    - icon: github
-#      link: Link to your GitHub profile
-#    - icon: twitter
-#      link: Link to your Twitter profile
+  social:
+    - icon: github
+      link: https://github.com/alisonpchase
+    - icon: github
+      link: https://github.com/ifcb-utopia
 #    - icon: linkedin
 #      link: Link to your LinkedIn profile
   user_groups:
