@@ -57,9 +57,9 @@ class CrossValContainer:
 
         return fullDF
 
-    def map_folds(self, axs=None, figsize=(10,6), ax_lims = [-125, -119, 30, 40]):
+    def map_folds(self, axs=None, figsize=(12,6), ax_lims = [-125, -119, 30, 40], glider_data=None):
         """ Map the training and validation data for each fold in a paneled plot.
-
+        Modified to automatically plot CCE region for this workshop.
         :param axs: optional array of axes to plot on, if None will create new figure
         :param ax_lims: list of [lon_min, lon_max, lat_min, lat_max] to set map extent
         """
@@ -74,16 +74,22 @@ class CrossValContainer:
             val_data = plot_data.loc[self.validation_inds[foldtag], :].copy()
             train_data = plot_data.loc[self.training_inds[foldtag], :].copy()
 
+
+            map_study_region(ax, ax_lims=ax_lims, gridlabel=False)
             ax.scatter(train_data.longitude, train_data.latitude, c='lightgrey', s=1, zorder=3,
                     transform=ccrs.PlateCarree(), label='train')
-            ax.scatter(val_data.longitude, val_data.latitude, c='r', s=5, zorder=5,
+            ax.scatter(val_data.longitude, val_data.latitude, c='r', s=4, zorder=5,
                     transform=ccrs.PlateCarree(), label='val')
+            
+            if glider_data is not None:
+                ax.scatter(glider_data.longitude, glider_data.latitude, c='navy', s=4, zorder=5,
+                        transform=ccrs.PlateCarree())
 
-            ax.set_extent(ax_lims)
-            # ax.coastlines(resolution = "50m", zorder=5, linewidth = 1)
-            ax.add_feature(cfeature.LAND, zorder=19, linewidth = 1, edgecolor='k', facecolor='linen')
-            ax.set_aspect('equal')
-            ax.gridlines(alpha=0.5)
+            # ax.set_extent(ax_lims)
+            # # ax.coastlines(resolution = "50m", zorder=5, linewidth = 1)
+            # ax.add_feature(cfeature.LAND, zorder=19, linewidth = 1, edgecolor='k', facecolor='linen')
+            # ax.set_aspect('equal')
+            # ax.gridlines(alpha=0.5)
         
         ax.legend(loc='lower right', fontsize=10, markerscale=2, framealpha=1)
         
@@ -96,9 +102,8 @@ def subset_folds(platDF, type= 'platform', indexer='platform_id', nfolds=5,
     Returns dictionary of training and validation dataframes for each fold.
 
     :param platDF: dataframe for either floatDF or shipDF
-    :param type: choose whether to split by 'platform' or 'kmeans' or 'random' 
-    :param indexer: choose whether to split by 'wmoid' or 'cruiseid'
-                    default "platform_id" for combined dataset (use align_platform_indexers())
+    :param type: options by 'platform', 'kmeans', or 'random' 
+    :param indexer: choose whether to split by 'wmoid' or 'profid'
                     only used if type = 'platform'
     :param nfolds: (int) number of folds for cross-validation
     :param latitude_scaler: float, scaling ratio for latitude/longitude in k-means
@@ -149,11 +154,14 @@ class CrossValModelRun:
         self.fold_list = fold_list
         self.models = {fold: None for fold in fold_list}
         self.validation_errors = {fold: None for fold in fold_list}
-        # self.description = description
-        self.rmse = None
-        self.median_abs_error = None
-        self.mean_abs_error = None
-        self.bias = None
+        # self.description = description # optional string tag
+        self.calibratedDF = None 
+        self.cal_coeffs = None
+
+        # self.rmse = None
+        # self.median_abs_error = None
+        # self.mean_abs_error = None
+        # self.bias = None
 
     def collapse_errors(self):
         """ Collapse validation errors across folds into a single dataframe """
@@ -161,7 +169,7 @@ class CrossValModelRun:
         return cv_errors
     
 
-def fit_cv_model(use_cvtainer, target_variable, use_feats, use_algorithm, use_hyperparams):
+def fit_cv_model(use_cvtainer, target_variable, use_feats, use_algorithm='RFR', use_hyperparams={}):
     modRun = CrossValModelRun(fold_list = use_cvtainer.fold_list)
 
     # Populate cvtainer fields with validation errors, models for each fold 
@@ -169,28 +177,34 @@ def fit_cv_model(use_cvtainer, target_variable, use_feats, use_algorithm, use_hy
         trainDF = use_cvtainer.input_data.loc[use_cvtainer.training_inds[nfold]]
         valDF = use_cvtainer.input_data.loc[use_cvtainer.validation_inds[nfold]]
 
-        modRun.models[nfold], modRun.validation_errors[nfold] = fit_single_fold(
+        modRun.models[nfold], modRun.validation_errors[nfold] = fit_single_regressor(
                                     trainDF, valDF,
                                     var_predict = target_variable, 
                                     feat_list = use_feats, # feature list
                                     regressor_type = use_algorithm,
                                     hyperparams = use_hyperparams)
+        
+    
+    modRun.calibratedDF, modRun.cal_coeffs = apply_linear_calibration(modRun.collapse_errors(), target_variable)
+
     return modRun
 
-def fit_single_fold(
+def fit_single_regressor(
               trainingDF, validationDF,
               var_predict, 
               feat_list,
               regressor_type = 'RFR', #regressor
-              hyperparams = {'n_estimators': 1000, 'max_features':1/3, 'min_samples_split': 5}):
+              hyperparams = {'n_estimators': 100}):
     """ 
     Fit single regressor, return validation errors
     """
             
     if regressor_type == 'RFR':
-        Mdl = RandomForestRegressor(n_estimators = hyperparams['n_estimators'], 
-                                    max_features = hyperparams['max_features'],
-                                    min_samples_split = hyperparams['min_samples_split'], 
+        # Mdl = RandomForestRegressor(n_estimators = hyperparams['n_estimators'], 
+        #                             max_features = hyperparams['max_features'],
+        #                             min_samples_split = hyperparams['min_samples_split'], 
+        #                             bootstrap=True)
+        Mdl = RandomForestRegressor(**hyperparams,
                                     bootstrap=True)
     # elif regressor_type == 'ERT':
     #     Mdl =
@@ -201,13 +215,40 @@ def fit_single_fold(
     Y_training = trainingDF.dropna(subset=feat_list)[var_predict].to_numpy().flatten()
     Mdl.fit(X_training, Y_training)
 
-    # Apply and get fold validation errors 
-    resultDF = validationDF.copy()
-    resultDF['val_prediction'] = Mdl.predict(validationDF[feat_list].to_numpy())
-    resultDF['val_error'] = resultDF['val_prediction'] - resultDF[var_predict].to_numpy().flatten()
-    resultDF['val_relative_error'] = resultDF['val_error'] / resultDF[var_predict].to_numpy().flatten()
+    if validationDF is not None:
+        # Apply and get fold validation errors 
+        resultDF = validationDF.copy()
+        resultDF['val_prediction'] = Mdl.predict(validationDF[feat_list].to_numpy())
+        resultDF['val_error'] = resultDF['val_prediction'] - resultDF[var_predict].to_numpy().flatten()
+        resultDF['val_relative_error'] = resultDF['val_error'] / resultDF[var_predict].to_numpy().flatten()
 
-    return Mdl, resultDF
+        return Mdl, resultDF
+    else: return Mdl
+
+def fit_final_model(trainingDF, testDF,  
+             var_predict, 
+              feat_list,
+              regressor_type = 'RFR', #regressor
+              hyperparams = {'n_estimators': 100}):
+    """ """
+    finalMdl, test_errors = fit_single_regressor(trainingDF, 
+                                testDF,
+                                var_predict,
+                                feat_list,
+                                regressor_type,
+                                hyperparams)
+    
+    calibrated_test_errors, cal_coeffs = apply_linear_calibration(test_errors, var_predict)
+    calibrated_test_errors.rename(columns={'val_prediction':'test_prediction', 
+                                'val_error':'test_error', 
+                                'val_relative_error':'test_relative_error'}, inplace=True)
+    return finalMdl, calibrated_test_errors, cal_coeffs
+
+def apply_final_model(applicationDF, feat_list, finalMdl, cal_coeffs):
+    applicationDF = applicationDF.copy()
+    applicationDF['uncal_prediction'] = finalMdl.predict(applicationDF[feat_list].to_numpy())
+    applicationDF['prediction'] = applicationDF['uncal_prediction'] * cal_coeffs[0] + cal_coeffs[1]
+    return applicationDF
 
 
 def apply_linear_calibration(valDF, target_variable):
@@ -243,14 +284,14 @@ def summarize_errors(platDF, error_param = 'val_error'):
         # median_ape = platDF['ape'].median()
         # mean_ape = platDF['ape'].mean()
 
-        result = ([median_abs_error, mean_abs_error, bias, rmse])
+        result = [median_abs_error, mean_abs_error, bias, rmse]
 
         return result
 
     
 def storedRuns_comparison(storedRuns_dict, run_tags = None, error_param='val_error', 
                           target_var='nitrate',
-                          by_fold = True,
+                          by_fold = False,
                           show=True): 
     """ 
     storedRuns: dictionary of ModelVersion objects, runtag as keys
@@ -270,7 +311,7 @@ def storedRuns_comparison(storedRuns_dict, run_tags = None, error_param='val_err
 
 
     for run_tag in run_tags[:]:
-        errorDF = storedRuns[run_tag]
+        errorDF = storedRuns[run_tag].calibratedDF
         # print('==> Results for ' + run_tag)
         # print('\t features ', feat_options[run_tag.split('-')[0]])
         # runResults = storedRuns[run_tag].weighted_validation.copy()
@@ -290,6 +331,27 @@ def storedRuns_comparison(storedRuns_dict, run_tags = None, error_param='val_err
 # 
 
 # %% Plotting functions
+
+def map_study_region(ax = None, ax_lims = [-130, -118, 30, 40], gridlabel=False):
+    """ 
+    Mapping shortcut for study region, with mooring location marked"""
+    
+    if ax is None: 
+        fig = plt.figure(figsize=(12, 6), layout='tight')
+        ax = fig.add_subplot(1,1,1, projection=ccrs.PlateCarree())
+
+    # CCE mooring location 
+    # mooring_loc =  [-120.803990, 34.303747]
+    # ax.scatter(mooring_loc[0], mooring_loc[1], c='k', s=40, marker='D', transform=ccrs.PlateCarree(), zorder=10)
+
+    ax.set_extent(ax_lims)
+    ax.coastlines(resolution = "50m", zorder=5, linewidth = 1)
+    ax.add_feature(cfeature.LAND, zorder=5, linewidth = 1, edgecolor='k', facecolor='linen')
+    ax.set_aspect('equal')
+    ax.gridlines(draw_labels=gridlabel)
+
+    return ax 
+
 
 def plot_decile_calibration(ax, cal_pred, cal_obs, stat_var='mean', axlims = [-65, 15]):
     ax.set_aspect('equal')
@@ -334,8 +396,6 @@ def make_run_tags(feat_options, data_options, target_options):
                     data_options = {'float': [trainClasses_float, valClasses],
                         'ship': [trainClasses_ship, valClasses],
                         'combined': [trainClasses, valClasses]}
-
-
                target_options: list of target variable names"""
     # Automatically generate run tag combinations
     run_tags = []
@@ -381,22 +441,24 @@ def linear2datetime(num, ref_time):
     """
     return (num * np.timedelta64(1,'D')) + np.datetime64(ref_time)
 
-def add_seasonal_sines(yearday):
-    """ For adding seasonal variable in Training_RandomForest.ipynb"""
-    yearday = yearday%365.25
-    ydcos = np.cos(2*np.pi*np.array(yearday)/365.25)
-    ydsin = np.sin(2*np.pi*np.array(yearday)/365.25)
+def add_seasonal_sines(day_of_year):
+    """ Return sinusoidal seasonal variables for a given day_of_year
+    Note day_of_year can be days since the start of any reference year 
+    
+    :param day_of_year: (float) datetime converted to days since Jan 1 (linear_time)
+    """
+
+    day_of_year = day_of_year%365.25
+    ydcos = np.cos(2*np.pi*np.array(day_of_year)/365.25)
+    ydsin = np.sin(2*np.pi*np.array(day_of_year)/365.25)
 
     return [ydcos, ydsin]
 
 
 def set_longitude_range(df, end_type = '360'):
-    """ Switch from 0-360 to -180,180 range"""
+    """ Switch between 0-360 to -180,180 range"""
     df = df.copy()
     if end_type == '180':
-        # inds = df['longitude']<180
-        # df.loc[inds, 'longitude'] = df.loc[inds, 'longitude'].apply(lambda x: x+360)
-        
         inds = df['longitude']>180
         df.loc[inds, 'longitude'] = df.loc[inds, 'longitude'].apply(lambda x: x-360)
     elif end_type == '360':
@@ -455,7 +517,7 @@ def create_argo_dataframe(floatDS, bgc_list = []):
     floatDF.rename(columns=new_columns, inplace=True)
 
     # Create a unique profile id to be a useful index
-    # Make sure strings are filled so 1st and 10th profile are different
+    # Make sure strings are zfilled so 1st and 10th profile are different
     floatDF['profid'] = floatDF.apply(lambda x: str(x.wmoid) + '_cyc' + str(x.cycle_number).zfill(3), axis=1)
 
     # Add calculated variables using gsw
@@ -528,10 +590,10 @@ def filter_qc_flags(float_df, qc_vars = 'all', use_flags=['1', '2', '5', '8']):
         print ('\n# of profiles after QC filtering: \t', str(len(float_qc.profid.unique())) + '\n')
         return float_qc
         
-def add_mlp(platDF, threshold=0.03):  
+def add_mlp(platDF, threshold=0.03, pres_lim=[5,15]):  
     """  
     Calculating mixed layer pressure (MLP) for each Argo profile 
-    Use linear interpolation to find mixed layer pressure between two pressure levels
+    Use linear interpolation to find mixed layer pressure between two nearest pressure levels
 
     @param:     platDF
                 threshold: Density threshold for mixed layer pressure calculation (default is 0.03 kg/m^3)
@@ -544,7 +606,7 @@ def add_mlp(platDF, threshold=0.03):
         prof_df = prof.reset_index().copy()
 
         try: # general catch for missing data
-            dens10 = prof_df.loc[(prof_df.pressure>5) & (prof_df.pressure<20)].sigma0.mean()
+            dens10 = prof_df.loc[(prof_df.pressure>pres_lim[0]) & (prof_df.pressure<pres_lim[1])].sigma0.mean()
             dens_tofind = dens10 + threshold 
             mask = prof_df.sigma0.values > dens_tofind
 
@@ -565,6 +627,13 @@ def add_mlp(platDF, threshold=0.03):
     platDF['mld'] = -gsw.z_from_p(platDF['mlp'], platDF['latitude'])
 
     return platDF # prof_mlps, no_data
+
+# %% Glider processing
+
+# def create_glider_dataframe(gliderDS):
+
+
+
 
 # Contact: Sangmin Song 
 # sangsong@uw.edu
