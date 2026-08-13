@@ -4,7 +4,7 @@ apply:
   url: '#'
   title: Applications have closed.
 banner:
-  description: A fun adventure in using BGC-Argo data
+  description: A fun adventure in using BGC Argo data
   start_date: 17 August
   end_date: 21 August
   year: 2026
@@ -17,7 +17,7 @@ banner:
 # The opening session of the event with UTC offset
 event_countdown: "2026-08-17T08:30:00-07:00"
 about:
-  description: This workshop is organized as a HackWeek, where small groups will pursue a scientific objective using BGC-Argo data while learning new things and building community.  
+  description: This workshop is organized as a HackWeek, where small groups will pursue a scientific objective using BGC Argo data while learning new things and building community.  
   learn_more: https://escience.washington.edu/using-data-science/hackweeks
   #links:
    # - url: 'https://www.go-bgc.org/'
