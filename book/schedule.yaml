@@ -13,7 +13,7 @@ tabs:
     description: null
     time: 8:00 - 8:30
   - title: Introductory Session
-    description: Welcome, Introductions, and Updates on GO-BGC and BGC-Argo.
+    description: Welcome, Introductions, and Updates on GO-BGC and BGC Argo.
     time: 8:30 - 9:30
     leads:
     - Alison Gray
@@ -28,7 +28,7 @@ tabs:
   - title: BREAK
     description: null
     time: 10:30 - 11:00
-  - title: BGC-Argo Data Examples
+  - title: BGC Argo Data Examples
     description: null
     time: 11:00 - 11:45
     leads:
@@ -55,7 +55,7 @@ tabs:
     description: null
     time: 15:00 - 16:00
   - title: RECEPTION and FLOAT LAB TOUR
-    description: Enjoy some light refreshments, learn about RBR and Seabird products, tour the UW Float Lab, and chat with fellow attendees and participants in the MATE Float Tech workshop in the lobby of the [Ocean Sciences Building](https://map.uw.edu/?id=2099#!m/973250?share).
+    description: Enjoy some light refreshments, learn about RBR and SeaBird Scientific products, tour the UW Float Lab, and chat with fellow attendees and participants in the MATE Float Tech workshop in the lobby of the [Ocean Sciences Building](https://map.uw.edu/?id=2099#!m/973250?share).
     time: 16:00 - 18:00
 - title: Day 2
   date: Tuesday 18 August
@@ -104,7 +104,7 @@ tabs:
   - title: Group Stand-Up
     description: null
     time: 9:00 - 9:15
-  - title: Remote Sensing and BGC-Argo Data
+  - title: Synergies between Remote Sensing and BGC Argo floats
     description: null
     time: 9:15 - 10:15
     leads:
