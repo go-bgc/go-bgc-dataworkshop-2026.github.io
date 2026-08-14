@@ -40,7 +40,7 @@ The main commands associated with branching are:
 
 Note that when `git merge` is executed sometimes the merge will fail and because of conflicts, and these conflicts have to be resolved manually by editing the conflicted files.
 
-A common development pattern is to have a small number of members (often a single person) specializing in merge management. When the other members completed their feature development, they commit their branch to the remote repo and make a **pull request** that notify the merge specialist to merge their development branch to the main branch. In that way teh merge process itself will not create extra conflicts.
+A common development pattern is to have a small number of members (often a single person) specializing in merge management. When the other members completed their feature development, they commit their branch to the remote repo and make a **pull request** that notify the merge specialist to merge their development branch to the main branch. In that way the merge process itself will not create extra conflicts.
 
 For more information about git commands, the official documentations and additional resources can be found on [https://git-scm.com/](https://git-scm.com/)
 
