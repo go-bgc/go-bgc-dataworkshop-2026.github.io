@@ -24,6 +24,14 @@ parts:
 - caption: Projects
   chapters:
     - file: projects/index
+- caption: Guides
+  chapters:
+    - file: guides/JupyterHub_guide.md
+    - file: guides/JupyterLab_guide.md
+    - file: guides/storage_guide.md
+    - file: guides/git_github_guide.md
+    - file: guides/AI_integration_guide.md
+    - file: guides/Docker_guide.md
 - caption: Reference
   chapters:
     - file: reference/glossary
