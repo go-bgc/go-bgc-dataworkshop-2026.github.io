@@ -27,3 +27,12 @@ python /home/jovyan/shared/bin/setup-claude-cloudbank.py
 ```
 
 On first run the script will ask you for the key you obtained. Which you can paste (you'll not see characters being entered, but pasting does work). Once a valid key is entered, the script will feed back some information to you, and you can start using Claude Code in the chat panels.
+
+````{Note}
+The above instructions are for those who want to use Cloudbank-provided Claude only. If you want to use your own Claude account, you can log in from the Terminal via:
+
+```bash
+claude /login
+```
+
+````
