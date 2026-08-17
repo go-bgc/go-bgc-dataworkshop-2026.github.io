@@ -28,6 +28,12 @@ In the Terminal interface, you can use the `aws s3` command-line tool to manipul
 + `aws s3 rm <remote_path>` removes a file located at the specified S3 path
 + `aws s3 sync <path_1> <path_2>` recursively sync the files from the directory located at path 1 (can be local or remote) to the directory located at path 2 (can be local or remote).
 
+To make the `aws s3` tool available, run the following command in Terminal (you should need to run this command only once; the installed binaries should persists between server boots in this case):
+
+```bash
+curl -fsSL https://awscli.amazonaws.com/v2/install.sh | bash
+```
+
 For more information about the `aws s3` interface, consult the documentation at [https://docs.aws.amazon.com/cli/latest/reference/s3/](https://docs.aws.amazon.com/cli/latest/reference/s3/).
 
 ### Python interface
